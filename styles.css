@@ -1,1 +1,191 @@
-*{box-sizing:border-box}body{margin:0}.app{min-height:100vh;font-family:Inter,system-ui,Arial;background:#f5f7fb;color:#111827}.dark{background:#0b1020;color:#e5e7eb}.topbar{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid #26304a;background:#111827}.brand{font-weight:800;font-size:20px;color:#fff}.actions{display:flex;gap:8px}.actions button,.actions select,.tabs button{border:1px solid #374151;background:#1f2937;color:#e5e7eb;border-radius:7px;padding:8px 12px;cursor:pointer}.actions button:hover,.actions select:hover{background:#374151}.workspace{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px;height:calc(100vh - 100px)}.panel{border:1px solid #29334d;border-radius:10px;overflow:hidden;background:#111827;min-width:0}.tabs{height:42px;display:flex;align-items:center;gap:5px;padding:5px;border-bottom:1px solid #29334d;background:#151c2f}.tabs button{border:0;border-radius:5px}.tabs .active{background:#2563eb;color:white}.preview-panel{display:flex;flex-direction:column;background:white}.panel-title{height:42px;padding:11px 14px;background:#151c2f;color:#fff;font-size:14px}.panel-title span{color:#22c55e;margin-left:5px}.preview-panel iframe{border:0;width:100%;flex:1;background:white}.console{min-height:38px;padding:10px 14px;background:#0f172a;color:#cbd5e1;font-size:13px}.app:not(.dark) .panel{background:#fff;border-color:#d1d5db}.app:not(.dark) .tabs{background:#f3f4f6;border-color:#d1d5db}.app:not(.dark) .actions button,.app:not(.dark) .actions select{background:#fff;color:#111827;border-color:#d1d5db}.app:not(.dark) footer{color:#4b5563}footer{text-align:center;height:36px;font-size:12px;color:#9ca3af} @media(max-width:800px){.workspace{grid-template-columns:1fr;height:auto}.editor-panel,.preview-panel{height:55vh}.actions select{display:none}.topbar{padding:0 10px}}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  min-height: 100vh;
+  font-family: Inter, system-ui, Arial;
+  background: #f5f7fb;
+  color: #111827;
+}
+
+.dark {
+  background: #0b1020;
+  color: #e5e7eb;
+}
+
+/* Header */
+
+.topbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid #26304a;
+  background: #111827;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 20px;
+  color: white;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button,
+.actions select,
+.tabs button {
+  border: 1px solid #374151;
+  background: #1f2937;
+  color: #e5e7eb;
+  border-radius: 7px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.actions button:hover,
+.actions select:hover {
+  background: #374151;
+}
+
+/* Workspace */
+
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 12px;
+  height: calc(100vh - 100px);
+}
+
+.panel {
+  border: 1px solid #29334d;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #111827;
+  min-width: 0;
+}
+
+/* Tabs */
+
+.tabs {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  border-bottom: 1px solid #29334d;
+  background: #151c2f;
+}
+
+.tabs button {
+  border: 0;
+  border-radius: 5px;
+}
+
+.tabs .active {
+  background: #2563eb;
+  color: white;
+}
+
+/* Preview */
+
+.preview-panel {
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.panel-title {
+  height: 42px;
+  padding: 11px 14px;
+  background: #151c2f;
+  color: white;
+  font-size: 14px;
+}
+
+.panel-title span {
+  color: #22c55e;
+  margin-left: 5px;
+}
+
+.preview-panel iframe {
+  border: 0;
+  width: 100%;
+  flex: 1;
+  background: white;
+}
+
+/* Console */
+
+.console {
+  min-height: 38px;
+  padding: 10px 14px;
+  background: #0f172a;
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+/* Light Mode */
+
+.app:not(.dark) .panel {
+  background: white;
+  border-color: #d1d5db;
+}
+
+.app:not(.dark) .tabs {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.app:not(.dark) .actions button,
+.app:not(.dark) .actions select {
+  background: white;
+  color: #111827;
+  border-color: #d1d5db;
+}
+
+.app:not(.dark) footer {
+  color: #4b5563;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  height: 36px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+  .workspace {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .editor-panel,
+  .preview-panel {
+    height: 55vh;
+  }
+
+  .actions select {
+    display: none;
+  }
+
+  .topbar {
+    padding: 0 10px;
+  }
+}
